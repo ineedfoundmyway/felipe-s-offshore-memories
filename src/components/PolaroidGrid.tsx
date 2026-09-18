@@ -1,17 +1,10 @@
-import pai1 from "@/assets/pai1.jpg.asset.json";
-import pai2 from "@/assets/pai2.jpg.asset.json";
-import pai3 from "@/assets/pai3.jpg.asset.json";
-import pai4 from "@/assets/pai4.jpg.asset.json";
-import pai5 from "@/assets/pai5.jpg.asset.json";
-import pai6 from "@/assets/pai6.jpg.asset.json";
-
 const photos = [
-  { src: pai5.url, caption: "Papai Fel na obra", tilt: "-3deg" },
-  { src: pai1.url, caption: "Embarque, colete e sorriso", tilt: "2.5deg" },
-  { src: pai6.url, caption: "Better Together", tilt: "-1.5deg" },
-  { src: pai4.url, caption: "Eu e meu exemplo", tilt: "3deg" },
-  { src: pai2.url, caption: "Mãos que cuidam", tilt: "-2.5deg" },
-  { src: pai3.url, caption: "Sempre em movimento", tilt: "1.5deg" },
+  { src: "/fotos/pai5.jpg", caption: "Papai Fel na obra", tilt: "-3deg", pos: "50% 30%" },
+  { src: "/fotos/pai1.jpg", caption: "Embarque, colete e sorriso", tilt: "2.5deg", pos: "60% 55%" },
+  { src: "/fotos/pai6.jpg", caption: "Better Together", tilt: "-1.5deg", pos: "50% 40%" },
+  { src: "/fotos/pai4.jpg", caption: "Eu e meu exemplo", tilt: "3deg", pos: "50% 55%" },
+  { src: "/fotos/pai2.jpg", caption: "Mãos que cuidam", tilt: "-2.5deg", pos: "50% 40%" },
+  { src: "/fotos/pai3.jpg", caption: "Sempre em movimento", tilt: "1.5deg", pos: "40% 45%" },
 ];
 
 export function PolaroidGrid() {
@@ -27,7 +20,11 @@ export function PolaroidGrid() {
             src={p.src}
             alt={p.caption}
             loading="lazy"
+            decoding="async"
+            width={640}
+            height={640}
             className="aspect-square w-full object-cover"
+            style={{ objectPosition: p.pos }}
           />
           <figcaption className="pt-4 text-center font-[family-name:var(--font-hand)] text-2xl leading-none">
             {p.caption}
