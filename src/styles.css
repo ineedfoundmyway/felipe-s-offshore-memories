@@ -154,3 +154,39 @@
     color: var(--color-foreground);
   }
 }
+
+@layer base {
+  body {
+    background-image:
+      radial-gradient(ellipse at 20% 0%, oklch(0.4 0.08 210 / 0.35), transparent 60%),
+      radial-gradient(ellipse at 90% 15%, oklch(0.62 0.16 48 / 0.18), transparent 55%),
+      var(--gradient-deep);
+    background-attachment: fixed;
+  }
+}
+
+@utility polaroid-card {
+  background: var(--color-polaroid);
+  color: var(--color-polaroid-foreground);
+  padding: 0.75rem 0.75rem 3.25rem;
+  box-shadow: var(--shadow-rig);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  &:hover {
+    transform: rotate(0deg) scale(1.03);
+  }
+}
+
+@utility text-sun {
+  background: var(--gradient-sun);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility deck-line {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-primary) 0 14px,
+    transparent 14px 28px
+  );
+}
