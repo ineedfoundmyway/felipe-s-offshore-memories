@@ -11,5 +11,15 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Prerender the static pages so `dist/client` can be deployed as a plain
+    // static folder (manual Netlify drag & drop, or any static host).
+    prerender: { enabled: true, crawlLinks: true },
+    pages: [{ path: "/", prerender: { enabled: true } }],
+  },
+  // Outside the Lovable sandbox (e.g. Netlify CI) target Netlify and keep the
+  // published files in dist/client.
+  nitro: {
+    preset: "netlify",
+    output: { dir: "dist", publicDir: "dist/client" },
   },
 });
