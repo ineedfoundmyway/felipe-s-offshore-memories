@@ -4,7 +4,7 @@ com essas fotos, crie um site na pegada offshore de fundo, com essas fotos como 
 
 This project was built with [Lovable](https://lovable.dev).
 
-## Build with Lovable
+## Build with Lovable / GPT SOL 5.6 HARD
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/2775c9c7-120e-4413-bdcf-18bb48fe3e9b).
 
@@ -12,7 +12,7 @@ Continue developing this project in the [Lovable editor](https://lovable.dev/pro
 - **Stay in sync**: every change made in Lovable is committed straight to this repository.
 - **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
-## Development
+## Development / me and collab brunnojob
 
 Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
