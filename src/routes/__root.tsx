@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Homenagem do filho Brunno ao pai Felipe Couto pela promoção a Sênior: fotos, música e muito orgulho.",
+          "Homenagem do filho Brunno ao pai Felipe Couto pela promoção a Sênior: fotos polaroid, trilha sonora e muito orgulho.",
       },
       { name: "author", content: "Brunno" },
       { property: "og:title", content: "Felipe Couto — Promoção a Sênior" },
